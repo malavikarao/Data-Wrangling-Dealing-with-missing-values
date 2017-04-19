@@ -7,7 +7,7 @@ titanic$embarked[idx] <- "S"
 
 mean_age <- mean(titanic$age, na.rm = TRUE)
 idx_na_age <- which(is.na(titanic$age))
-titanic$age[idx_na_age] <- mean_age
+titanic$age[idx_na_age] <- round(mean_age)
 
 titanic$boat <- as.character(titanic$boat)
 idx_na_boat <- which(titanic$boat == "")
